@@ -1,0 +1,183 @@
+body {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+    margin: 0px;
+    background: #333;
+    padding: 70px 0;
+    font: 15px/20px Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-image: url(/public/images/fondo.jpg);
+  }
+
+  h1{
+    font: bold 80px/1 arial;
+  text-transform: uppercase;
+  color: #c61e1e;
+  text-shadow: 0  2px  0   #8b1515,
+               0  4px  0   #7c1313,
+               0  6px  0   #6e1111, 
+               0  8px  0   #5f0e0e, 
+               0 10px  0   #500c0c,
+               0 12px  0   #410a0a,
+              3px 8px 15px rgba(0,0,0,0.1),
+              3px 8px  5px rgba(0,0,0,0.3);
+    font-size: 72px;
+    margin-bottom: 150px;
+    filter: drop-shadow(0 0 0.75rem crimson);
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 300px;
+    height: 240px;
+    position: relative;
+    perspective: 600px;
+    cursor: pointer;
+    gap: 10px;
+  }
+  .container .carousel div:hover{
+    box-shadow: 0px 0px 20px 0px black;
+  }
+  .container img{
+    width: 280px;
+    height: 220px;
+  }
+  
+  .carousel {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .item {
+    display: block;
+    position: absolute;
+    background: #000;
+    width: 280px;
+    height: 220px;
+    line-height: 220px;
+    font-size: 5em;
+    text-align: center;
+    color: #FFF;
+    opacity: 0.95;
+    border-radius: 10px;
+  }
+  
+  .a {
+    transform: rotateY(0deg) translateZ(250px);
+    background: #ed1c24;
+  }
+  .b {
+    transform: rotateY(60deg) translateZ(250px);
+    background: #0072bc;
+  }
+  .c {
+    transform: rotateY(120deg) translateZ(250px);
+    background: #39b54a;
+  }
+  .d {
+    transform: rotateY(180deg) translateZ(250px);
+    background: #f26522;
+  }
+  .e {
+    transform: rotateY(240deg) translateZ(250px);
+    background: #630460;
+  } 
+  .f {
+    transform: rotateY(300deg) translateZ(250px);
+    background: #8c6239;
+  }
+  
+  .next, .prev {
+    color: #444;
+    position: absolute;
+    top: 350px;
+    padding: 1em 2em;
+    cursor: pointer;
+    background: #CCC;
+    border-radius: 5px;
+    border-top: 1px solid #FFF;
+    box-shadow: 0 5px 0 #999;
+    transition: box-shadow 0.1s, top 0.1s;
+  }
+  .next:hover, .prev:hover { 
+    color: #000;
+     font-weight: bold;
+    
+  }
+  .next:active, .prev:active {
+    top: 354px;
+    box-shadow: 0px 1px 0px #999;
+  }
+  .next { right: 5em; }
+  .prev { left: 5em; }
+
+  @media only screen and (max-width:480px) {
+    .next, .prev {
+        color: #444;
+        position: absolute;
+        top: 180px;
+        cursor: pointer;
+        background: #CCC;
+        border-radius: 5px;
+        border-top: 1px solid #FFF;
+        box-shadow: 0 5px 0 #999;
+        transition: box-shadow 0.1s, top 0.1s;
+      }
+      .item {
+        display: block;
+        position: absolute;
+        background: #000;
+        width: 120px;
+        height: 60px;
+        line-height: 150px;
+        font-size: 3em;
+        text-align: center;
+        color: #FFF;
+        opacity: 1;
+        border-radius: 10px;
+      }
+      .prev{
+          left: 1.5em;
+      }
+      .next { 
+        right: 1.5em;
+       }
+      .next:hover, .prev:hover {
+          color: rgb(24, 34, 167);
+         }
+         .a {
+            transform: rotateY(0deg) translateZ(250px);
+            background: #ed1c24;
+            font-size: 2em;
+            color: blue;
+          }
+          .b {
+            transform: rotateY(70deg) translateZ(250px);
+            background: #0072bc;
+          }
+          .c {
+            transform: rotateY(120deg) translateZ(250px);
+            background: #39b54a;
+          }
+          .d {
+            transform: rotateY(180deg) translateZ(250px);
+            background: #f26522;
+          }
+          .e {
+            transform: rotateY(240deg) translateZ(250px);
+            background: #630460;
+          } 
+          .f {
+            transform: rotateY(300deg) translateZ(250px);
+            background: #8c6239;
+          }
+          .next:active, .prev:active {
+            top: 160px;
+            box-shadow: 0 1px 0 #999;
+          }
+}
